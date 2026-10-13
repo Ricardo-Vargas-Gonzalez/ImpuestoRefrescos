@@ -1,19 +1,21 @@
-# calculadora de Impuestos del Refresco
+# Calculadora de Impuestos del Refresco
 
-Programa realizado para calcular el impuesto y el precio final de los refrescos cobn ese impuesto añadiodo: 
+Programa realizado para calcular el impuesto y el precio final de los refrescos con ese impuesto añadido.
 
-Caso de estudio: cafeteria escolart que realizaba previamente el calculo del precio final
+Caso de estudio: cafetería escolar que realizaba previamente el cálculo del precio final.
 
- Regglas que debemos considerar:
- El programa debe utilizar la clase Scanner para la entrada de datos  y
- validar que el usuario ingrese un valor numérico positivo.
- 
- ## ¿porque usar un hasNextDouble en lugar de un try-catch?
+Reglas que debemos considerar:
+- El programa debe utilizar la clase Scanner para la entrada de datos.
+- Validar que el usuario ingrese un valor numérico positivo.
 
-hasNextDouble es un método de Scanner que VERIFICA si el siguiente dato ingresado es un double, SIN intentar leerlo.Ventajas sobre try-catch:
+## ¿Por qué usar "hasNextDouble()" en lugar de "try-catc"?
+
+"hasNextDouble()" es un método de Scanner que VERIFICA si el siguiente dato ingresado es un double, SIN intentar leerlo.
+
+Ventajas sobre "try-catch":
 1. Es la forma "explícita" y recomendada por la comunidad Java.
 2. Evita el "abuso de excepciones" para control de flujo.
 3. El código se lee de forma natural: "mientras no sea double, error".
 4. Es preventivo, no reactivo: preguntamos antes de actuar.
 
-Si usáramos nextDouble() directamente y el usuario ingresa texto, el programa lanzaría InputMismatchException y se detendría. Con hasNextDouble(), lo prevenimos antes de que ocurra.
+Si usáramos "nextDouble()" directamente y el usuario ingresa texto, el programa lanzaría "InputMismatchException" y se detendría. Con "hasNextDouble()", lo prevenimos antes de que ocurra.

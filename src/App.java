@@ -1,9 +1,10 @@
 import java.util.Scanner;
 
 /**
- * Programa realizado para calcular el impuesto y el precio final de los refrescos cobn ese impuesto añadiodo, descripción mas detallada
- * en archivo REDME.md
- * 
+ * Programa realizado para calcular el impuesto y el precio final de los
+ * refrescos cobn ese impuesto añadiodo, descripción mas detallada en archivo
+ * REDME.md
+ *
  * @author VARGAS GONZALEZ RICARDO ALONSO
  * @version 1.0
  */
@@ -42,7 +43,6 @@ public class App {
         // ========================================
         // Declaración de variables
         // ========================================
-        
         double precio = 0.0;
         double impuesto;
         double precioFinal;
@@ -64,7 +64,7 @@ public class App {
             // ----------------------------------------
             // aqui me plnantee una duda interesante, conforme buscaba información y ejemplos en stack overflow 
             // ¿Por qué usamos hasNextDouble() en lugar de try-catch?
-            // respuesta en el README.md
+            // lo cual desarrollo en el README.md
             if (teclado.hasNextDouble()) {
 
                 // Si el dato es un double, lo leemos con nextDouble()
@@ -74,7 +74,8 @@ public class App {
                 // Operador relacional: >
                 // ----------------------------------------
                 // Usamos el operador ">" para validar que el precio sea
-                // mayor que cero. Si el precio es <= 0, mostramos error.
+                // mayor que cero, si el precio es <= 0, mostramos error,
+                // como mencioné esto permite que no haya tampoco numeros negativos
                 if (precio > 0) {
                     datosValidos = true; // Dato válido, salimos del ciclo
                 } else {
@@ -92,11 +93,7 @@ public class App {
         // ========================================
         // Cálculo del impuesto y precio final
         // ========================================
-        // ----------------------------------------
-        // Operador aritmético: multiplicación (*)
-        // ----------------------------------------
-        // El impuesto se calcula multiplicando el precio por la tasa (0.16).
-        // Fórmula: impuesto = precio * TASA_IMPUESTO
+
         impuesto = precio * TASA_IMPUESTO;
 
         // ----------------------------------------
@@ -109,8 +106,7 @@ public class App {
         // ========================================
         // Mostrar resultados
         // ========================================
-        // Se imprimen los resultados con System.out.println.
-        // Se usa "\n" para saltos de línea y mejorar la presentación.
+
         System.out.println("\n--- RESULTADO DEL CÁLCULO ---");
         System.out.println("Precio sin impuesto: $" + precio);
         System.out.println("Impuesto (16%): $" + impuesto);
@@ -120,7 +116,8 @@ public class App {
         // ========================================
         // Cerrar el Scanner
         // ========================================
-        // Es una buena práctica cerrar el Scanner al terminar de usarlo
+        // Finalmente,. con base en lo que aprendi de stackoverflow es
+        // una buena práctica cerrar el Scanner al terminar de usarlo
         // para liberar los recursos del sistema.
         teclado.close();
     }
